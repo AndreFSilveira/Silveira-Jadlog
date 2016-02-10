@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * André Felipe Silveira
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL).
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @package    Silveira_Jadlog
+ * @author     André Felipe Silveira (andrefelipesilveira@gmail.com.br)
+ * @copyright  Copyright (c) 20015
+ * @license    OSL 3.0
+ */
+-->
+<config>
+   <sections>
+    <carriers>
+        <groups>
+            <jadlog translate="label" module="shipping">
+                <label>Silveira - Transportadora Jadlog</label>
+                <frontend_type>text</frontend_type>
+                <sort_order>13</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <mode translate="label">
+                            <label>Modalidade</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>jadlog/source_mode</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>Selecione aqui os tipos de entrega que serão utilizados pela loja.</comment>
+                        </mode>
+                        <password translate="label">
+                            <label>Senha</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </password>
+                        <insurance translate="label">
+                            <label>Seguro</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>jadlog/source_insurance</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </insurance>
+                        <collection_value translate="label">
+                            <label>Valor da coleta</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <validate>validate-number</validate>
+                            <comment>Esse valor será adicionada ao valor do frete.(centavos separados por ponto '.')</comment>
+                        </collection_value>
+                        <pay_destination translate="label">
+                            <label>Pagar no destino</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>60</sort_order>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </pay_destination>
+                        <type_delivery translate="label">
+                            <label>Tipo de entrega</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>jadlog/source_typeDelivery</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </type_delivery>
+                        <cnpj translate="label">
+                            <label>CNPJ da loja</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </cnpj>
+                        <carrier_title translate="label">
+                            <label>Título do frete</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </carrier_title>
+                        <type_weight translate="label">
+                            <label>Peso dos produtos em kilos ou gramas?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>jadlog/source_weight</source_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>Esse campo deve estar de acordo com o peso dos produtos cadastrados na loja.</comment>
+                        </type_weight>
+                    </fields>
+                </jadlog>
+            </groups>
+        </carriers>
+    </sections>
+</config>

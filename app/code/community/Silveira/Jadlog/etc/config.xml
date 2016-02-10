@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * André Felipe Silveira
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL).
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @package    Silveira_Jadlog
+ * @author     André Felipe Silveira (andrefelipesilveira@gmail.com.br)
+ * @copyright  Copyright (c) 20015
+ * @license    OSL 3.0
+ */
+-->
+<config>
+    <modules>
+        <Silveira_Jadlog>
+            <version>1.0.0</version>
+        </Silveira_Jadlog>
+    </modules>
+    <global>
+        <helpers>
+            <jadlog>
+                <class>Silveira_Jadlog_Helper</class>
+            </jadlog>
+        </helpers>
+        <models>
+            <jadlog>
+                <class>Silveira_Jadlog_Model</class>
+            </jadlog>
+        </models>
+    </global>
+    <default>
+        <carriers>
+            <jadlog>
+                    <active>1</active>
+                    <sallowspecific>0</sallowspecific>
+                    <model>Silveira_Jadlog_Model_Carrier_Default</model>
+                    <name>Jadlog</name>
+                    <method_name>Transportadora Jadlog</method_name>
+                    <title>Transportadora</title>
+                    <specificerrmsg>Houve um problema interno.</specificerrmsg>
+                    <use_default>0</use_default>
+                    <handling_type>R</handling_type>
+            </jadlog>
+        </carriers>
+    </default>
+</config>
