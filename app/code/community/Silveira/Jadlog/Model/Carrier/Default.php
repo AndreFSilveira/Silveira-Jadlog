@@ -43,7 +43,6 @@ class Silveira_Jadlog_Model_Carrier_Default extends Mage_Shipping_Model_Carrier_
         } catch (Exception $e) {
             Mage::log("Servidor está offline - ". $e->getMessage() ,null,  'jadlog_errors.log');
             return false;
-            exit;
         }
     }
 
